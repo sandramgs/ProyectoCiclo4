@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
     return (
-       <div className="container-fluid">
+        <div className="container-fluid">
         <div className="row">
             <div className="col-auto col-xl-auto px-sm-2 bg-light">
                 <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -40,7 +41,6 @@ export const Sidebar = () => {
           
         </div>
     </div>
-
     );
 }   
 

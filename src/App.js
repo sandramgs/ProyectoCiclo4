@@ -1,18 +1,34 @@
-import Login from './componentes/Login';
-import Sidebar from './componentes/Sidebar';
-import Header from './componentes/Header';
+import React from "react";
+import Predios from './componentes/paginas/Predios';
+import Sidebar from './componentes/navegacion/Sidebar';
+import Header from './componentes/navegacion/Header';
+import Login from './componentes/paginas/Login';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="row">
-        <Header/>
-      <div className="col-auto">
-        <Sidebar/>
+    <Router>
+    
+      <Header/>
+        <div className="row">
+        
+          <div className="col-auto">
+            <Sidebar/>
+          </div>
+          <div className="col">
+          <Login/>
+          </div>
+          <div className="col">
+          <Predios/>
+          </div>
       </div>
-      <div className="col">
-        <Login/>
-      </div>
-    </div>
+      
+    </Router>
   );
 }
 
