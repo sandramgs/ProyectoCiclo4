@@ -1,5 +1,6 @@
 import DataTable from "react-data-table-component";
 import BottonNew from "../navegacion/BottonNew";
+import { Card } from "react-bootstrap";
 
 const columns = [
     {
@@ -74,20 +75,24 @@ const columns = [
     }
   ]
 
-  function Cultivos(props) {
+  function Cultivos() {
     return (
-      <>
-        <BottonNew />
-        <div className="App">
-          <DataTable
-            title="Cultivos"
-            columns={columns}
-            data={filas}
-            defaultSortField="title"
-            pagination
-            selectableRows />
-        </div>s
-      </>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h2>Cultivos</h2>
+          </Card.Title>
+          <BottonNew />
+          <div className="App">
+            <DataTable
+              columns={columns}
+              data={filas}
+              defaultSortField="title"
+              pagination
+              selectableRows />
+          </div>
+        </Card.Body>
+      </Card>
     );
   }
   export default Cultivos;

@@ -1,4 +1,5 @@
 import DataTable from "react-data-table-component";
+import { Card } from "react-bootstrap"
 
 const columns = [
     {
@@ -57,16 +58,22 @@ const columns = [
 
   function AdminUsuarios(props) {
     return (
-      <div className="App">
-          <DataTable
-            title="Administración de Usuarios"
-            columns={columns}
-            data ={filas}
-            defaultSortField="title"
-            pagination
-            selectableRows
-          />
-      </div>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h2>Administración de Usuarios</h2>
+          </Card.Title>
+          <div className="App">
+            <DataTable
+              columns={columns}
+              data ={filas}
+              defaultSortField="title"
+              pagination
+              selectableRows
+            />
+          </div>
+        </Card.Body>
+      </Card>
     );
   }
   export default AdminUsuarios;

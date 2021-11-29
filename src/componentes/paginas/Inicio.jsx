@@ -1,6 +1,10 @@
+
+
 function Inicio(props){
     return(
-        <h1>Hola, esta aplicación te ayudará a gestionar los cultivos.</h1>
+        <div className="card mt-5">
+            <h2>Hola, esta aplicación te ayudará a gestionar los cultivos.</h2>
+        </div>
     );
 }
 export default Inicio;

@@ -54,29 +54,3 @@ function App() {
   );
 }
 export default App;
-
-
-/*
-function App() {
-  
-  return (
-    <Router>
-    
-      <Header/>
-      <div className="row">
-        
-          <div className="col-auto">
-            <Sidebar/>
-          </div>
-          <div className="col">
-            <Predios/>
-          </div>
-        
-      </div>
-      
-    </Router>
-  );
-  }
-  export default App;
-*/
-
