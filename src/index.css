@@ -2,13 +2,14 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
 #wrapper {
     min-height: 100%; 
     background-color: #cccccc;
 }
 
 .fondo {
-    background-image: url('./assets/cultivosbg.jpg');
+    background-image: url('./assets/cultivosbg.jpg') !important;
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;

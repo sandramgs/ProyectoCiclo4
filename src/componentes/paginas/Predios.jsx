@@ -65,7 +65,8 @@ const columns = [
             <h2>Predios</h2>
           </Card.Title>
           <BottonNew />
-          <div className="App">
+          <div className="row"></div>
+          <div className="card mt-5">
             <DataTable
               columns={columns}
               data={filas}

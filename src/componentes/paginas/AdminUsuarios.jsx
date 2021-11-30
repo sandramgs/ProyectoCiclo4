@@ -63,7 +63,7 @@ const columns = [
           <Card.Title>
             <h2>Administración de Usuarios</h2>
           </Card.Title>
-          <div className="App">
+          <div className="card mt-5">
             <DataTable
               columns={columns}
               data ={filas}

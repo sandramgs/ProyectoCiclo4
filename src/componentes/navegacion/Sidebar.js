@@ -1,7 +1,7 @@
 
 export const Sidebar = ({ onOptionClicked }) => {
     return (
-        <div className="container-fluid">
+    <div className="container-fluid">
         <div className="row">
             <div className="col-auto col-xl-auto px-sm-2 bg-light">
                 <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -9,44 +9,46 @@ export const Sidebar = ({ onOptionClicked }) => {
                         <span className="fs-4 d-none d-sm-inline">Cultivarte</span>
                     </a>
                     <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        <li className="nav-item">
+                        <li className="nav-item" >
                             <a href="#Inicio" name="inicio" onClick={onOptionClicked} className="nav-link align-middle px-0">
-                                <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Inicio</span>
+                                Inicio
                             </a>
                         </li>
                         <li>
                             <a href="#AdminUsuarios" name="admin" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                                <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Administración Usuarios</span> 
+                                Administración Usuarios
                             </a>
                             
                         </li>
                         <li>
                             <a href="#Predios" name="predios" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                                <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Predios</span> 
+                                Predios 
                             </a>
                             
                         </li>
                         <li>
                             <a href="#TiposCultivo" name="tiposc" onClick={onOptionClicked} className="nav-link px-0 align-middle">
-                                <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">Tipos de cultivo</span>
+                                Tipos de cultivo
                             </a>
                         </li>
                         <li>
                             <a href="#InsumosValor" name="insumosv" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
-                                <i className="fs-4 bi-bootstrap"></i> <span className="ms-1 d-none d-sm-inline">Insumos</span>
+                                Insumos
                             </a>
                     
                         </li>
                         <li>
                             <a href="#Cultivos" name="cultivos" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                                <i className="fs-4 bi-grid"></i> <span className="ms-1 d-none d-sm-inline">Cultivos</span> 
+                                Cultivos
                             </a>                      
                         </li>
                     </ul>
-                   
                 </div>
             </div>
-          
+        </div>
+
+        <div class="side-menu-footer">
+            <h6>Powered by We</h6>
         </div>
     </div>
     );
