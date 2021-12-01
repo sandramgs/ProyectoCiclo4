@@ -20,22 +20,25 @@ function App() {
   const onOptionClicked = function(evt) {
     evt.preventDefault();
 
-    if (evt.target.name==="inicio") {
-      setCompDinamico(<Inicio />);}
-    else {
-      if (evt.target.name ==="admin") { setCompDinamico(<AdminUsuarios />); }
-      else { 
-        if (evt.target.name==="predios") {setCompDinamico(<Predios />);}
-        else {
-          if (evt.target.name==="tiposc") {setCompDinamico(<TiposCultivo />);}
-          else {
-            if (evt.target.name==="insumosv") {setCompDinamico(<InsumosValor />);}
-            else
-              setCompDinamico(<Cultivos />);
-              
-          }
-        }
-      }
+    switch(evt.target.name) {
+      case "inicio":
+        setCompDinamico(<Inicio />);
+        break;
+      case "admin":
+        setCompDinamico(<AdminUsuarios />);
+        break;
+      case "predios":
+        setCompDinamico(<Predios />);
+        break;
+      case "tiposc":
+        setCompDinamico(<TiposCultivo />);
+        break;
+      case "insumosv":
+        setCompDinamico(<InsumosValor />);
+        break;
+      default:
+        setCompDinamico(<Cultivos />);   
+        break;
     }
   }
 
@@ -46,7 +49,7 @@ function App() {
         <div className="col-auto">
           <Sidebar onOptionClicked={ onOptionClicked } />
         </div>
-        <div className="col">
+        <div className="col fondo">
           { compDinamico }
         </div>
       </div>

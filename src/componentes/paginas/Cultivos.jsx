@@ -45,7 +45,7 @@ const columns = [
   const filas = [
     {
         id: 1,
-        predio: '0001 - Finca Maizal',
+        predio: '01 - Finca Maizal',
         tipoCultivo: 'Maiz popocho',
         area: '50',
         inicioCultivo: "01-01-2022",
@@ -55,7 +55,7 @@ const columns = [
     },
     {
         id: 2,
-        predio: '0002 - Hacienda Patillal',
+        predio: '02 - Hacienda Patillal',
         tipoCultivo: 'Frijol rojo',
         area: '100',
         inicioCultivo: "01-01-2021",
@@ -65,14 +65,44 @@ const columns = [
     },
     {
         id: 3,
-        predio: '0020 - Finca La Prosperidad',
+        predio: '20 - Finca La Prosperidad',
         tipoCultivo: 'Maiz popocho',
         area: '200',
         inicioCultivo: "01-12-2021",
         finCosecha: "01-06-2022",
         valorTotal: "9000000",
         accion: "ninguna"
-    }
+    },
+    {
+      id: 4,
+      predio: '04 - Finca Italia',
+      tipoCultivo: 'Algodón',
+      area: '500',
+      inicioCultivo: "01-11-2021",
+      finCosecha: "01-05-2022",
+      valorTotal: "7700000",
+      accion: "ninguna"
+  },
+  {
+      id: 5,
+      predio: '05 - Hacienda Naranjal',
+      tipoCultivo: 'Naranja Tangelo',
+      area: '1000',
+      inicioCultivo: "01-08-2021",
+      finCosecha: "05-08-2023",
+      valorTotal: "1500000",
+      accion: "ninguna"
+  },
+  {
+      id: 6,
+      predio: '21 - Finca Los Pinos',
+      tipoCultivo: 'Fresas 1-A',
+      area: '200',
+      inicioCultivo: "15-10-2021",
+      finCosecha: "10-06-2022",
+      valorTotal: "7000000",
+      accion: "ninguna"
+  }
   ]
 
   function Cultivos() {
