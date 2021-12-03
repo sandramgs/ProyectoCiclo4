@@ -3,10 +3,10 @@ export const Sidebar = ({ onOptionClicked }) => {
     return (
     <div className="container-fluid">
         <div className="row">
-            <div className="col-auto col-xl-auto px-sm-2 bg-light">
-                <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" className="d-flex align-items-center pb-4 mb-md-0 me-md-auto text-black text-decoration-none">
-                        <span className="fs-4 d-none d-sm-inline">Cultivarte</span>
+            <div className="col-auto col-xl-auto px-sm-1">
+                <div className="d-flex flex-column align-items-center align-items-sm-start px-2 pt-3 min-vh-100">
+                    <a href="/" className="d-flex align-items-center pb-4 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <span className="fs-3 d-none d-sm-inline">Cultivarte</span>
                     </a>
                     <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li className="nav-item" >

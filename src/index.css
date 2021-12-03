@@ -9,7 +9,42 @@ html, body {
 }
 
 .fondo {
-    background-image: url('./assets/cultivosbg.jpg') !important;
+    background-image: url('./assets/img/fondoManzanas.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.fondo2 {
+    background-image: url('./assets/img/fondoHojas.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.fondo3 {
+    background-image: url('./assets/img/fondoEspigasCielo.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.fondo4 {
+    background-image: url('./assets/img/fondoCruceEspigas.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.fondo5 {
+    background-image: url('./assets/img/fondoCocos.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.fondo6 {
+    background-image: url('./assets/img/fondoHojaCielo.jpg');
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
@@ -19,4 +54,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+.color1{
+    background-color:darkgray
+}
   

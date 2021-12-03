@@ -49,7 +49,7 @@ function App() {
         <div className="col-auto">
           <Sidebar onOptionClicked={ onOptionClicked } />
         </div>
-        <div className="col fondo">
+        <div className="col fondo5">
           { compDinamico }
         </div>
       </div>
