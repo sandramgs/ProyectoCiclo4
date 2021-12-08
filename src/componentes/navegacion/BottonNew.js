@@ -20,7 +20,7 @@ function BottonNew(){
               <Modal.Header closeButton>
                 <Modal.Title>Ventana emergente de Ejemplo</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Esta ventana modal hace parte de Cultivarte, aqui, en un futuro muy cercano irán los formularios para insertar nuevos registros según sea el caso: cultivos, tipos de cultivo y predios; a no ser que esa sea una mala idea y sea mejor hacerlo de otra forma.</Modal.Body>
+              <Modal.Body> sea el caso: cultivos, tipos de cultivo y predios; a no ser que esa sea una mala idea y sea mejor hacerlo de otra forma.</Modal.Body>
               <Modal.Footer>
                 <Button variant="danger" onClick={handleClose}>
                   Cerrar
