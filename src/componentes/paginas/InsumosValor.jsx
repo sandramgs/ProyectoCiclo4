@@ -1,6 +1,6 @@
 import DataTable from "react-data-table-component";
 import { Card } from "react-bootstrap";
-import BottonNew from '../navegacion/BottonNew';
+import BottonInsumo from '../navegacion/BottonInsumo';
 
 const columns = [
     {
@@ -73,7 +73,7 @@ const columns = [
           <Card.Title>
             <h2>Valor Insumos</h2>
           </Card.Title>
-          <BottonNew />
+          <BottonInsumo/>
           <div className="row"></div>
           <div className="card mt-5">
             <DataTable

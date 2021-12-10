@@ -1,5 +1,5 @@
 import DataTable from "react-data-table-component";
-import BottonNew from "../navegacion/BottonNew";
+import BottonCultivos from "../navegacion/ButtonCultivos";
 import { Card } from "react-bootstrap";
 
 const columns = [
@@ -112,7 +112,7 @@ const columns = [
           <Card.Title>
             <h2>Cultivos</h2>
           </Card.Title>
-          <BottonNew />
+          <BottonCultivos/>
           <div className="row"></div>
           <div className="card mt-5">
             <DataTable
