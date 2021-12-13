@@ -1,7 +1,7 @@
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 
-function BottonCultivos() {
+function FormCultivos() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -15,7 +15,7 @@ function BottonCultivos() {
         </Button>
       </div>
 
-      <Modal className='w-auto' show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Cultivos</Modal.Title>
         </Modal.Header>
@@ -216,4 +216,4 @@ function BottonCultivos() {
   );
 }
 
-export default BottonCultivos;
+export default FormCultivos;

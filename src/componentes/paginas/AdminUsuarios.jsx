@@ -58,7 +58,7 @@ const columns = [
 
   function AdminUsuarios(props) {
     return (
-      <Card>
+      <Card className="transparente">
         <Card.Body>
           <Card.Title>
             <h2>Administración de Usuarios</h2>
@@ -69,7 +69,6 @@ const columns = [
               data ={filas}
               defaultSortField="title"
               pagination
-              selectableRows
             />
           </div>
         </Card.Body>

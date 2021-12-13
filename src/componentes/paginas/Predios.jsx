@@ -1,5 +1,5 @@
 import DataTable from "react-data-table-component";
-import BottonNew from "../navegacion/BottonNew";
+import FormPredios from "../formularios/FormPredios";
 import { Card } from "react-bootstrap"
 
 const columns = [
@@ -59,12 +59,12 @@ const columns = [
 
   function Predios(props) {
     return (
-      <Card>
+      <Card className="transparente">
         <Card.Body>
           <Card.Title>
             <h2>Predios</h2>
           </Card.Title>
-          <BottonNew />
+          <FormPredios title="nuevo"/>
           <div className="row"></div>
           <div className="card mt-5">
             <DataTable
@@ -72,7 +72,7 @@ const columns = [
               data={filas}
               defaultSortField="title"
               pagination
-              selectableRows />
+            />
           </div>
         </Card.Body>
       </Card>

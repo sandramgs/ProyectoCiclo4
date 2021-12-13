@@ -1,3 +1,4 @@
+import FormRegistro from "../formularios/FormRegistro";
 
 function Login() {
     return (
@@ -27,7 +28,8 @@ function Login() {
                                 <button id="btnLogin" type="button" className="btn btn-lg btn-primary">Ingresar</button>
                             </div>
                             <div className="card-footer mb-2 text-center">
-                                <a href="none">¿Olvidaste la contraseña?</a> o <a href="none">¿Aún no te has registrado?</a>
+                                <a href="none">¿Olvidaste la contraseña?</a> o <a href={<FormRegistro show={true}/>}>¿Aún no te has registrado?</a>
+
                             </div>
                         </form>
                     </div>

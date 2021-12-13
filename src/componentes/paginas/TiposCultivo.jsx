@@ -1,5 +1,5 @@
 import DataTable from "react-data-table-component";
-import Button1 from "../navegacion/Button1";
+import FormTiposC from "../formularios/FormTiposC";
 import { Card } from "react-bootstrap"
 
 const columns = [
@@ -59,12 +59,12 @@ const columns = [
 
   function TiposCultivo(props) {
     return (
-      <Card>
+      <Card className="transparente">
         <Card.Body>
           <Card.Title>
             <h2>Tipos de Cultivo</h2>
           </Card.Title>
-          <Button1 />
+          <FormTiposC />
           <div className="row"></div>
           <div className="card mt-5">
             <DataTable
@@ -72,7 +72,7 @@ const columns = [
               data={filas}
               defaultSortField="title"
               pagination
-              selectableRows />
+            />
           </div>
         </Card.Body>
       </Card>

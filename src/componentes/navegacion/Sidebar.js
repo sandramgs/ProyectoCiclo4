@@ -10,35 +10,35 @@ export const Sidebar = ({ onOptionClicked }) => {
                     </a>
                     <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li className="nav-item" >
-                            <a href="#Inicio" name="inicio" onClick={onOptionClicked} className="nav-link align-middle px-0">
+                            <a href="#Inicio" name="inicio" onClick={onOptionClicked} className="nav-link fuenteMenu align-middle px-0">
                                 Inicio
                             </a>
                         </li>
                         <li>
-                            <a href="#AdminUsuarios" name="admin" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
+                            <a href="#AdminUsuarios" name="admin" onClick={onOptionClicked} data-bs-toggle="collapse" className="fuenteMenu  nav-link px-0 align-middle">
                                 Administración Usuarios
                             </a>
                             
                         </li>
                         <li>
-                            <a href="#Predios" name="predios" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
+                            <a href="#Predios" name="predios" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link fuenteMenu px-0 align-middle">
                                 Predios 
                             </a>
                             
                         </li>
                         <li>
-                            <a href="#TiposCultivo" name="tiposc" onClick={onOptionClicked} className="nav-link px-0 align-middle">
+                            <a href="#TiposCultivo" name="tiposc" onClick={onOptionClicked} className="nav-link fuenteMenu px-0 align-middle">
                                 Tipos de cultivo
                             </a>
                         </li>
                         <li>
-                            <a href="#InsumosValor" name="insumosv" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
+                            <a href="#InsumosValor" name="insumosv" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link fuenteMenu px-0 align-middle ">
                                 Insumos
                             </a>
                     
                         </li>
                         <li>
-                            <a href="#Cultivos" name="cultivos" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link px-0 align-middle">
+                            <a href="#Cultivos" name="cultivos" onClick={onOptionClicked} data-bs-toggle="collapse" className="nav-link fuenteMenu px-0 align-middle">
                                 Cultivos
                             </a>                      
                         </li>

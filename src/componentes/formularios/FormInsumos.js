@@ -1,17 +1,46 @@
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function BottonInsumo() {
+const initialData = {
+    id: 2,
+    tipoInsumo: 'Fertilizante',
+    descripcion: 'Triple 15',
+    unidad: 'Kg',
+    valorUnidad: "6500",
+    fechaInicioTarifa: "01-08-2021",
+    accion: "ninguna"
+}
+
+function FormInsumos({title = "", item = initialData}) {
   const [show, setShow] = useState(false);
-
+  const [state, setState] = useState(item);
+  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  /*
+  useEffect(() => {
+    console.log(state);
+    setState({
+      id:item.id
+    })
+  }, [show]);
+  */
+   
+  const handleChange = (e) => {    
+    console.log(e.target.name + " : " + e.target.value);    
+    setState({
+      ...state,
+      [e.target.name]:e.target.value
+    })    
+  }
 
   return (
     <>
       <div className="float-end mt-2">
         <Button variant="primary" onClick={handleShow}>
-          Nuevo
+          {title}
         </Button>
       </div>
 
@@ -20,7 +49,9 @@ function BottonInsumo() {
           <Modal.Title>Insumos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form>        
+            <input type="text" name="id" value={state.id} onChange={handleChange}  />    
+            <input type="text" name="nombre" value={state.nombre} onChange={handleChange}  />           
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridState">
                 <Form.Label>Tipo de Insumo</Form.Label>
@@ -55,7 +86,7 @@ function BottonInsumo() {
 
             <Form.Group className="mb-3 mt-4" controlId="formGridAddress2">
               <Form.Label>Valor Unidad</Form.Label>
-              <Form.Control placeholder="Apartment, studio, or floor" />
+              <Form.Control placeholder="Apartment, studio, or floor"/>
             </Form.Group>
 
             <Row className="mb-3">
@@ -83,4 +114,4 @@ function BottonInsumo() {
   );
 }
 
-export default BottonInsumo;
+export default FormInsumos;
