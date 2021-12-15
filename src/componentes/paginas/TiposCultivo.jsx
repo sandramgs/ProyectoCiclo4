@@ -71,6 +71,8 @@ const columns = [
               columns={columns}
               data={filas}
               defaultSortField="title"
+              FixedHeader="true"
+              striped= "true"
               pagination
             />
           </div>

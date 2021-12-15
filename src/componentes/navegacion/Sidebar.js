@@ -47,7 +47,7 @@ export const Sidebar = ({ onOptionClicked }) => {
             </div>
         </div>
 
-        <div class="side-menu-footer">
+        <div className="side-menu-footer">
             <h6>Powered by We</h6>
         </div>
     </div>

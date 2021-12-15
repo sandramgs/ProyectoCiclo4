@@ -1,20 +1,10 @@
 import DataTable from "react-data-table-component";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import FormInsumos from '../formularios/FormInsumos';
 import FormConfirmar from "../formularios/FormConfirmar";
 
 
-const Boton = ({handleClick, isLoading})=> {
-  return (<>
-  <Button onClick={handleClick}>Prueba</Button>
-  </>)
-}
-
   function InsumosValor(props) {
-
-    const prueba = () => {
-      alert("esto es una prueba");
-    }  
 
     const columns = [
       {
@@ -75,7 +65,7 @@ const Boton = ({handleClick, isLoading})=> {
       {
           id: 3,
           tipoInsumo: 'Agua',
-          descripcion: 'Agua de pozo profundo muy muy muy muy muy profundo',
+          descripcion: 'Agua de pozo profundo',
           unidad: 'M3',
           valorUnidad: "500",
           fechaInicioTarifa: "01-10-2021",
@@ -86,7 +76,6 @@ const Boton = ({handleClick, isLoading})=> {
             valorUnidad: "500",
             fechaInicioTarifa: "01-10-2021"}}/>,
           eliminar: <FormConfirmar item={{id: 3}}/>
-          //<Boton handleClick={prueba} isLoading={true} />
       }
     ]
 

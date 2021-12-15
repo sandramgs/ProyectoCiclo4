@@ -10,7 +10,7 @@ function FormConfirmar(props){
     return (
       <Container>    
         <div className="float-end mt-2">
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="danger" onClick={handleShow}>
                 Eliminar
             </Button>
         </div>

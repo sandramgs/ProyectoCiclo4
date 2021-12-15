@@ -64,13 +64,15 @@ const columns = [
           <Card.Title>
             <h2>Predios</h2>
           </Card.Title>
-          <FormPredios title="nuevo"/>
+          <FormPredios title="Nuevo"/>
           <div className="row"></div>
           <div className="card mt-5">
             <DataTable
               columns={columns}
               data={filas}
               defaultSortField="title"
+              FixedHeader="true"
+              striped= "true"
               pagination
             />
           </div>
