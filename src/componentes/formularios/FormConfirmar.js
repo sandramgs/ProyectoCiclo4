@@ -23,10 +23,10 @@ function FormConfirmar(props){
             <p>Si estás seguro de querer eliminar el registro haz click en Eliminar; de lo contrario haz click en Cancelar</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger" onClick={handleClose}>
+            <Button variant="primary" onClick={handleClose}>
               Cancelar
             </Button>
-            <Button variant="primary" onClick={handleClose}>
+            <Button variant="danger" onClick={handleClose}>
               Eliminar
             </Button>
           </Modal.Footer>

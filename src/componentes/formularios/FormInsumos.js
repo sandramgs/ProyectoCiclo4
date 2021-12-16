@@ -29,7 +29,7 @@ function FormInsumos({title = "", item = initialData}) {
   return (
     <>
       <div className="float-end mt-2">
-        <Button variant={title==="Editar" ? "success" : "primary"} onClick={handleShow}>
+        <Button variant={title==="Editar" ? "warning" : "primary"} onClick={handleShow}>
           {title}
         </Button>
       </div>
