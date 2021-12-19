@@ -1,17 +1,37 @@
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 
-function FormCultivos() {
+const initialData = {
+  id: 0,
+  predio: 'Seleccione el predio',
+  tipoCultivo: 'Seleccione',
+  area: '',
+  inicioCultivo: "",
+  finCosecha: "",
+  valorTotal: "0"
+}
+
+function FormCultivos({title = "", item = initialData}) {
   const [show, setShow] = useState(false);
+  const [state, setState] = useState(item);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const alCambiar = (e) => {    
+    console.log(state);   
+    console.log(e.target.name) 
+    setState({
+      ...state,
+      [e.target.name]:e.target.value
+    });
+  }
+
   return (
     <>
       <div className="float-end mt-2">
-        <Button variant="primary" onClick={handleShow}>
-          Nuevo
+        <Button variant={title==="Editar" ? "warning" : "primary"} onClick={handleShow}>
+        {title}
         </Button>
       </div>
 
@@ -43,7 +63,7 @@ function FormCultivos() {
               </Form.Group>
               <Form.Group as={Col} controlId="formGridState">
                 <Form.Label>Valor Unidad</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
+                <Form.Control placeholder="Apartment, studio, or floor" defaultValue={state.area} name="area" onChange={alCambiar}/>
               </Form.Group>
             </Row>
             <Row className="mb-3">
@@ -55,7 +75,7 @@ function FormCultivos() {
                 <Form.Label type="date" name="date_of_birth">
                   Fecha de inicio
                 </Form.Label>
-                <Form.Control />
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
               </Form.Group>
               <Button
                 className=" mt-4"
@@ -72,19 +92,19 @@ function FormCultivos() {
                 <Form.Label type="date" name="date_of_birth">
                   Fin Cultivo
                 </Form.Label>
-                <Form.Control />
+                <Form.Control defaultValue={state.finCosecha} name="finCoshecha" onChange={alCambiar}/>
               </Form.Group>
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label type="date" name="date_of_birth">
                   Inicio Cosecha
                 </Form.Label>
-                <Form.Control />
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
               </Form.Group>
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label type="date" name="date_of_birth">
                   Fin Cosecha
                 </Form.Label>
-                <Form.Control />
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
               </Form.Group>
             </Row>
             <Row>

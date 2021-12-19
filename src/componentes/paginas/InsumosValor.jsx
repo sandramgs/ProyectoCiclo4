@@ -51,7 +51,14 @@ import FormConfirmar from "../formularios/FormConfirmar";
           descripcion: 'Maiz popocho',
           unidad: 'Kg',
           valorUnidad: "25000",
-          fechaInicioTarifa: "01-12-2020",         
+          fechaInicioTarifa: "01-12-2020",
+          editar: <FormInsumos title="Editar" item={{id: 1,
+            tipoInsumo: 'Semilla',
+            descripcion: 'Triple 15',
+            unidad: 'Kg',
+            valorUnidad: "25000",
+            fechaInicioTarifa: "01-12-2021"}}/>,
+          eliminar: <FormConfirmar item={{id: 1}}/>        
       },
       {
           id: 2,
@@ -60,7 +67,14 @@ import FormConfirmar from "../formularios/FormConfirmar";
           unidad: 'Kg',
           valorUnidad: "6500",
           fechaInicioTarifa: "01-08-2021",
-          accion: "ninguna"
+          accion: "ninguna",
+          editar: <FormInsumos title="Editar" item={{id: 2,
+            tipoInsumo: 'Fertilizante',
+            descripcion: 'Triple 15',
+            unidad: 'Kg',
+            valorUnidad: "6500",
+            fechaInicioTarifa: "01-08-2021"}}/>,
+          eliminar: <FormConfirmar item={{id: 2}}/>
       },
       {
           id: 3,
@@ -102,4 +116,4 @@ import FormConfirmar from "../formularios/FormConfirmar";
     );
   }
 
-   export default InsumosValor;
+  export default InsumosValor;
