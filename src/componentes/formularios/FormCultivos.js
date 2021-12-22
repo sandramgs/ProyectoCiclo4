@@ -4,6 +4,7 @@ import { post, put } from "../../api/http"
 
 const initialData = {
   id: 0,
+<<<<<<< HEAD
   predio: 'Seleccione Predio',
   tipoCultivo: 'Seleccione Tipo de Cultivo',
   area: 0,
@@ -17,6 +18,17 @@ const initialData = {
 }
 
 function FormCultivos({title = "", item = initialData, setFilas, filas}) {
+=======
+  predio: 'Seleccione el predio',
+  tipoCultivo: 'Seleccione',
+  area: '',
+  inicioCultivo: "",
+  finCosecha: "",
+  valorTotal: "0"
+}
+
+function FormCultivos({title = "", item = initialData}) {
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
   const [show, setShow] = useState(false);
   const [state, setState] = useState(item);
 
@@ -31,6 +43,7 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
       [e.target.name]:e.target.value
     });
   }
+<<<<<<< HEAD
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -70,12 +83,18 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
     console.log("filas después del push", filas)
     setFilas([...filas]);
   };
+=======
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
 
   return (
     <>
       <div className="float-end mt-2">
         <Button variant={title==="Editar" ? "warning" : "primary"} onClick={handleShow}>
+<<<<<<< HEAD
           {title}
+=======
+        {title}
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
         </Button>
       </div>
 
@@ -106,8 +125,13 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridState">
+<<<<<<< HEAD
                 <Form.Label>Hectareas</Form.Label>
                 <Form.Control defaultValue={state.area} name="area" onChange={alCambiar} />
+=======
+                <Form.Label>Valor Unidad</Form.Label>
+                <Form.Control placeholder="Apartment, studio, or floor" defaultValue={state.area} name="area" onChange={alCambiar}/>
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
               </Form.Group>
             </Row>
             <Row className="mb-3">
@@ -116,8 +140,15 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
                 <Form.Control defaultValue={state.cosechaKg} name="cosechaKg"/>
               </Form.Group>
               <Form.Group as={Col} controlId="formGridCity">
+<<<<<<< HEAD
                 <Form.Label type="date">Fecha inicio Cultivo</Form.Label>
                 <Form.Control defaultValue={state.inicioCultivo} name="inicioCultivo"/>
+=======
+                <Form.Label type="date" name="date_of_birth">
+                  Fecha de inicio
+                </Form.Label>
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
               </Form.Group>
               <Button
                 className=" mt-4"
@@ -131,6 +162,7 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
             </Row>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridCity">
+<<<<<<< HEAD
                 <Form.Label type="date">Fin Cultivo</Form.Label>
                 <Form.Control defaultValue={state.finCultivo} name="finCultivo"/>
               </Form.Group>
@@ -141,6 +173,24 @@ function FormCultivos({title = "", item = initialData, setFilas, filas}) {
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label type="date">Fin Cosecha</Form.Label>
                 <Form.Control defaultValue={state.finCosecha} name="finCosecha"/>
+=======
+                <Form.Label type="date" name="date_of_birth">
+                  Fin Cultivo
+                </Form.Label>
+                <Form.Control defaultValue={state.finCosecha} name="finCoshecha" onChange={alCambiar}/>
+              </Form.Group>
+              <Form.Group as={Col} controlId="formGridCity">
+                <Form.Label type="date" name="date_of_birth">
+                  Inicio Cosecha
+                </Form.Label>
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
+              </Form.Group>
+              <Form.Group as={Col} controlId="formGridCity">
+                <Form.Label type="date" name="date_of_birth">
+                  Fin Cosecha
+                </Form.Label>
+                <Form.Control defaultValue={state.inicioCultivo} name="iniciocultivo" onChange={alCambiar}/>
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
               </Form.Group>
             </Row>
             <Row>

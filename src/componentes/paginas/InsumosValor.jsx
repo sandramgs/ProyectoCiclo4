@@ -48,6 +48,7 @@ import { useState, useEffect } from "react";
       }
     ];  
 
+<<<<<<< HEAD
     useEffect(() => {
       get("insumos/todos").then((respuesta) => {
         setFilas(respuesta)
@@ -73,6 +74,56 @@ import { useState, useEffect } from "react";
       return fila;
     })}
     ;
+=======
+    const filas = [
+      {
+          id: 1,
+          tipoInsumo: 'Semilla',
+          descripcion: 'Maiz popocho',
+          unidad: 'Kg',
+          valorUnidad: "25000",
+          fechaInicioTarifa: "01-12-2020",
+          editar: <FormInsumos title="Editar" item={{id: 1,
+            tipoInsumo: 'Semilla',
+            descripcion: 'Triple 15',
+            unidad: 'Kg',
+            valorUnidad: "25000",
+            fechaInicioTarifa: "01-12-2021"}}/>,
+          eliminar: <FormConfirmar item={{id: 1}}/>        
+      },
+      {
+          id: 2,
+          tipoInsumo: 'Fertilizante',
+          descripcion: 'Triple 15',
+          unidad: 'Kg',
+          valorUnidad: "6500",
+          fechaInicioTarifa: "01-08-2021",
+          accion: "ninguna",
+          editar: <FormInsumos title="Editar" item={{id: 2,
+            tipoInsumo: 'Fertilizante',
+            descripcion: 'Triple 15',
+            unidad: 'Kg',
+            valorUnidad: "6500",
+            fechaInicioTarifa: "01-08-2021"}}/>,
+          eliminar: <FormConfirmar item={{id: 2}}/>
+      },
+      {
+          id: 3,
+          tipoInsumo: 'Agua',
+          descripcion: 'Agua de pozo profundo',
+          unidad: 'M3',
+          valorUnidad: "500",
+          fechaInicioTarifa: "01-10-2021",
+          editar: <FormInsumos title="Editar" item={{id: 3,
+            tipoInsumo: 'Agua',
+            descripcion: 'Agua de pozo profundo',
+            unidad: 'M3',
+            valorUnidad: "500",
+            fechaInicioTarifa: "01-10-2021"}}/>,
+          eliminar: <FormConfirmar item={{id: 3}}/>
+      }
+    ]
+>>>>>>> 3fdaf03bf373c349ddeab5871e687043bec184d4
 
     return (
       <Card className="transparente">
@@ -97,4 +148,4 @@ import { useState, useEffect } from "react";
     );
   }
 
-   export default InsumosValor;
+  export default InsumosValor;

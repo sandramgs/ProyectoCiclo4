@@ -1,7 +1,9 @@
 import DataTable from "react-data-table-component";
 import FormTiposC from "../formularios/FormTiposC";
 import { Card } from "react-bootstrap"
+import FormConfirmar from "../formularios/FormConfirmar";
 
+function TiposCultivo(props) {
 const columns = [
     {
       name: "Descripcion",
@@ -33,6 +35,16 @@ const columns = [
       selector: "cntAgua",
       sortable: true,
       right: true
+    },
+    {
+      name: "Editar",
+      selector: "editar",
+      right : "true",
+    },
+    {
+      name: "Eliminar",
+      selector: "eliminar",
+      right: "true",
     }
   ];
 
@@ -44,7 +56,15 @@ const columns = [
         cntSemilla: '30',
         fertilizante: 'Triple 15',
         cntFertilizante: "5",
-        cntAgua: "20"
+        cntAgua: "20",
+        editar: <FormTiposC title="Editar" item={{id: 1,
+          descripcion: 'Maiz popocho',
+          semilla: 'MP020',
+          cntSemilla: '30',
+          fertilizante: 'Triple 15',
+          cntFertilizante: "5",
+          cntAgua: "20"}}/>,
+        eliminar: <FormConfirmar item={{id: 1}}/>
     },
     {
       id: 2,
@@ -53,15 +73,23 @@ const columns = [
       cntSemilla: '25',
       fertilizante: 'Triple 18',
       cntFertilizante: "6",
-      cntAgua: "18"
+      cntAgua: "18",
+      editar: <FormTiposC title="Editar" item={{id: 2,
+        descripcion: 'Maiz popocho',
+        semilla: 'MP020',
+        cntSemilla: '30',
+        fertilizante: 'Triple 15',
+        cntFertilizante: "5",
+        cntAgua: "20"}}/>,
+      eliminar: <FormConfirmar item={{id: 2}}/>
     }
   ]
 
-  function TiposCultivo(props) {
     return (
       <Card className="transparente">
         <Card.Body>
           <Card.Title>
+          <FormTiposC title="Nuevo"/>
             <h2>Tipos de Cultivo</h2>
           </Card.Title>
           <FormTiposC />
