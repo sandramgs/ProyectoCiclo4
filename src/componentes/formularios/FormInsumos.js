@@ -1,5 +1,7 @@
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { useState } from "react";
+import { post, put } from "../../api/http"
+import { get } from "../../"
 
 const initialData = {
     id: 0,
@@ -10,7 +12,7 @@ const initialData = {
     fechaInicioTarifa: ''
 }
 
-function FormInsumos({title = "", item = initialData}) {
+function FormInsumos({title = "", item = initialData, setFilas, filas}) {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(item);
   
@@ -26,6 +28,46 @@ function FormInsumos({title = "", item = initialData}) {
     });
   }
 
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const insumo = {
+        tipo_insumo: data.get("tipoInsumo"),
+        unidad_medida: data.get("unidad"),
+        descripcion: data.get("descripcion"),
+        valor_unidad: data.get("valorUnidad"),
+        valido_desde: data.get("fechaInicioTarifa")
+      };
+      if(title === "Editar"){
+        put("insumos/editar", insumo);
+        handleClose();
+        actualizarId(item.id);
+      }else{
+        let res = await post("insumos/nuevo", insumo);
+        handleClose();
+        console.log("res ...", res._id);
+        insertarInsumo(Object.assign(insumo, {_id: res._id}));
+      }  
+  } 
+
+  const actualizarId = (id) => {
+    console.log("filas desde FormInsumos", filas);
+    const filtered= filas.map((fila) => {
+      if (fila._id === id){
+        return({...state});
+      }else{
+        return(fila);
+      }
+    })
+    setFilas(filtered);
+  };
+
+  const insertarInsumo = (insumo) => {
+    filas.push(insumo);
+    console.log("filas después del push", filas)
+    setFilas([...filas]);
+  };
+
   return (
     <>
       <div className="float-end mt-2">
@@ -39,7 +81,7 @@ function FormInsumos({title = "", item = initialData}) {
           <Modal.Title>Insumos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>        
+          <Form onSubmit = {handleSubmit} id="crearInsumo">        
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridState" >
                 <Form.Label>Tipo de Insumo</Form.Label>
@@ -86,7 +128,7 @@ function FormInsumos({title = "", item = initialData}) {
           <Button variant="danger" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" form="crearInsumo" type="submit">
             Guardar
           </Button>
         </Modal.Footer>

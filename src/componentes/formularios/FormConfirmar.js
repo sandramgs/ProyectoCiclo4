@@ -1,12 +1,26 @@
 import { Button, Container, Modal } from "react-bootstrap";
 import { useState } from 'react';
+import { httpDelete } from "../../api/http"
 
-function FormConfirmar(props){
+function FormConfirmar({endpoint, id, filas, setFilas}){
     const [show, setShow] = useState(false);
       
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleSubmit = (event) => {
+      httpDelete(endpoint, id);
+      handleClose();
+      eliminaId(id);
+    };
       
+    const eliminaId = (id) => {
+      let filtered = filas.filter(function(fila, index, arr){ 
+        return fila._id !== id;
+      });
+      setFilas(filtered);
+    };
+
     return (
       <Container>    
         <div className="float-end mt-2">
@@ -26,7 +40,7 @@ function FormConfirmar(props){
             <Button variant="primary" onClick={handleClose}>
               Cancelar
             </Button>
-            <Button variant="danger" onClick={handleClose}>
+            <Button variant="danger" onClick={handleSubmit}>
               Eliminar
             </Button>
           </Modal.Footer>

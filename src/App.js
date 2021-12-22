@@ -7,8 +7,6 @@ import Predios from './componentes/paginas/Predios';
 import TiposCultivo from "./componentes/paginas/TiposCultivo";
 import Cultivos from "./componentes/paginas/Cultivos";
 import InsumosValor from "./componentes/paginas/InsumosValor";
-
-//import {BrowserRouter as Router} from "react-router-dom";
 import { Fragment, useState } from 'react';
 
 
